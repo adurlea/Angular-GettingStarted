@@ -1,3 +1,9 @@
+# About this repository
+This project is an app made during the course ["Angular: Getting Started"](http://bit.ly/Angular-GettingStarted) course on Pluralsight.
+I forked the course starting project remove the final app folder and build the app along with the course. 
+All the rights are reserved to the owner of the course. Details below. 
+
+
 # Angular-Getting Started
 Materials for the ["Angular: Getting Started"](http://bit.ly/Angular-GettingStarted) course on Pluralsight.
 

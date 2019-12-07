@@ -1,6 +1,40 @@
 <div class="card" *ngIf='product'>
-  <div class="card-reader">
-    {{pageTitle + ': ' + product.productName}}
+  <div class="card-header">
+      {{pageTitle + ': ' + product.productName}}
+  </div>
+  <div class="card-body">
+      <div class='table-responsive'>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                    <ul style="list-style: none !important;">
+                      <li>Name:</li>
+                      <li>Code:</li>
+                      <li>Description:</li>
+                      <li>Availability:</li>
+                      <li>Price:</li>
+                      <li>5 Star Ratting:</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style: none !important;">
+                      <li>{{product.productName}}</li>
+                      <li>{{product.productCode | lowercase | convertToSpaces: '-'}}</li>
+                      <li>{{product.description}}</li>
+                      <li>{{product.releaseDate}}</li>
+                      <li>{{product.price | currency: 'EUR' : 'symbol' : '1.2-2'}}</li>
+                      <li><pm-star [rating]='product.starRating'></pm-star></li>
+                    </ul>
+                </td>
+                <td>
+                  <img [src]='product.imageUrl' [title]='product.productName'
+                              [style.width.px]='imageWidth' [style.margin.px]='imageMargin' />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
   </div>
   <div class="card-footer">
     <button class="btn btn-outline-secondary" (click)='onBack()' style="width: 80px;">

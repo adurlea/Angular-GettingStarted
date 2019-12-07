@@ -9,6 +9,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
   pageTitle: string = 'Product Detail';
   product: IProduct;
+  imageWidth: number = 130;
+  imageMargin: number = 10;
+
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
